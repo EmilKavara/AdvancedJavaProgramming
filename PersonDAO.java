@@ -6,7 +6,7 @@ public class PersonDAO {
     public static void baza() {
 
         String username="root";
-        String password="Admirmosevo123";
+        String password="123";
         String url="jdbc:mysql://localhost:3306/person?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
         ArrayList personList=new ArrayList();
         try(Connection connection= DriverManager.getConnection(url,username,password)){
