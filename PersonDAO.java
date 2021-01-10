@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class PersonDAO {
@@ -19,7 +20,8 @@ public class PersonDAO {
                 String surname=resultSet.getString(3);
                 String gender=resultSet.getString(4);
                 Date date=resultSet.getDate(5);
-                Person person=new Person(id,name,surname,gender,date);
+                 LocalDate localDate=date.toLocalDate();
+                Person person=new Person(id,name,surname,gender,localDate);
                 personList.add(person);
             }
             printList(personList);
